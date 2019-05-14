@@ -1,0 +1,11 @@
+body {
+  overflow: hidden;
+}
+
+#switchText {
+  transition: 1s;
+}
+#left, #right {
+  user-select: none;
+  cursor: pointer;
+}
