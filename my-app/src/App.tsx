@@ -1,33 +1,33 @@
 import * as React from 'react';
 import './App.css';
-import Content from './Components/Content';
+import Header from "./Components/Header";
+import Content from "./Components/Content";
 
 class App extends React.Component<any, any> {
 
     constructor(props: any) {
         super(props);
         this.state = {
-            userList: []
-        }
+            page: 'Home'
+        };
+        this.bindHandlers();
     }
 
-    public componentDidMount(): void {
-        // TODO: Code here
-        fetch('./newData.json')
-            .then(response => console.log(response))
-            .then(result => {
-                this.setState({
-                    userList: result
-                })
-            })
-            .catch(error => console.log(error))
+    public bindHandlers() {
+        this.handleHeaderClick = this.handleHeaderClick.bind(this);
+    }
+
+    public handleHeaderClick(e) {
+        this.setState({
+            page: e.target.id
+        })
     }
 
     public render() {
         return (
             <div>
-                <h1>Hello TypeScript!</h1>
-                <Content text='Text from Prop' altText='Different Text'/>
+                <Header preTitle='my' title='Website' handleClick={this.handleHeaderClick}/>
+                <Content page={this.state.page}/>
             </div>
     );
   }
