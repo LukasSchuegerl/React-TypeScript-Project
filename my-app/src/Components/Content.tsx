@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import Home from "./Pages/Home";
-import Event from "./Pages/Event";
+import Login from "./Pages/Login";
 import PageNotFound from "./Pages/PageNotFound";
 
 class Content extends PureComponent<any, any> {
@@ -9,22 +9,24 @@ class Content extends PureComponent<any, any> {
         super(props);
     }
 
-    public render() {
-        let page;
-        switch(this.props.page) {
+    public getPage(page) {
+        switch(page) {
             case 'Home':
-                page = <Home />;
+                return <Home />;
                 break;
-            case 'Event':
-                page = <Event />;
+            case 'Login':
+                return <Login />;
                 break;
             default:
-                page = <PageNotFound page={this.props.page}/>;
+                return <PageNotFound page={page}/>;
                 break;
         }
+    }
+
+    public render() {
         return (
             <div id={'content'}>
-                {page}
+                {this.getPage(this.props.page)}
             </div>
         )
     }

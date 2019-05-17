@@ -5,14 +5,14 @@ export const links = [
   },
   {
     "id": 1,
-    "link": "Event"
-  },
-  {
-    "id": 2,
     "link": "About"
   },
   {
-    "id": 3,
+    "id": 2,
     "link": "Help"
+  },
+  {
+    "id": 3,
+    "link": "Login"
   }
 ]

@@ -1,7 +1,7 @@
 module.exports = {
 
     "roots": [
-        "<C:/user/mic/Desktop/nodeApp/my-app/src>"
+        "<rootDir>/src>"
     ],
 
     "transform": {

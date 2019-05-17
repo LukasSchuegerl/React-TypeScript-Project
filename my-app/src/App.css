@@ -77,7 +77,7 @@ nav ul li:hover {
   padding: 2px 10px 2px 10px;
 }
 
-#positionContainerHomeContent {
+.positionContainerContent {
   display: grid;
   min-height: calc( 100% - 60px );
   grid-template-columns: 1fr 250px;
@@ -97,12 +97,15 @@ nav ul li:hover {
   list-style-type: none;
 }
 
-.sidebar ul li h3:not(:nth-child(1)) {
+.sidebar ul li:not(:nth-child(1)) h3 {
   margin-top: 10px;
 }
 
 .sidebar ul ul li {
+  margin-top: 5px;
   padding-left: 10px;
+  user-select: none;
+  cursor: pointer;
 }
 
 .pageHeader {
