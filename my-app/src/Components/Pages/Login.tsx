@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+// import Home from "./Home";
 
 class Login extends PureComponent<any, any> {
 

@@ -5,11 +5,11 @@ export const links = [
   },
   {
     "id": 1,
-    "link": "About"
+    "link": "Funktion"
   },
   {
     "id": 2,
-    "link": "Help"
+    "link": "Datenschutz"
   },
   {
     "id": 3,

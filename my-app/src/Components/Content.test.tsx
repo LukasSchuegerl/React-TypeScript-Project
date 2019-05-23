@@ -10,4 +10,4 @@ it('should return Component with Name equal to page prop', () => {
 it('should return Name of Component equal to page prop', () => {
     const wrapper = shallow(<Content page={'Home'} />);
     expect(wrapper.instance().getPage('Home').type.name).toEqual('Home');
-})
+});

@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import PageNotFound from "./Pages/PageNotFound";
+import Funktion from "./Pages/Funktion";
+import Datenschutz from "./Pages/Datenschutz";
 
 class Content extends PureComponent<any, any> {
 
@@ -16,6 +18,12 @@ class Content extends PureComponent<any, any> {
                 break;
             case 'Login':
                 return <Login />;
+                break;
+            case 'Funktion':
+                return <Funktion />;
+                break;
+            case 'Datenschutz':
+                return <Datenschutz />;
                 break;
             default:
                 return <PageNotFound page={page}/>;
